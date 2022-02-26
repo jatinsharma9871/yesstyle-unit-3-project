@@ -333,7 +333,7 @@
         #bagitems {
             font-size: 30px;
             color: gray;
-            margin-left: 35px;
+            margin-left: 0px;
         }
         #countitems:hover{
             color: limegreen;
@@ -447,3 +447,9 @@
 
 </html>
 
+<script>
+    var totalamount = JSON.parse(localStorage.getItem("totalamount")) || 0;
+    document.querySelector('#g').textContent = totalamount;
+    var baglength = JSON.parse(localStorage.getItem("baglength")) || 0;
+    document.querySelector('#countitems').textContent = baglength;
+</script>
